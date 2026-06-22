@@ -32,9 +32,9 @@
 <div class="wrap" id="categories">
 <div class="section-label"><h2>Explorer par catégorie</h2><div class="ln"></div></div>
 <div class="cats">
-<a class="cat" href="maison.html"><span class="ci">🏡</span><h3>Maison & entretien</h3><p>Nettoyer, ranger, entretenir, faire durer.</p><span class="count">3 articles</span></a>
-<a class="cat" href="argent.html"><span class="ci">💰</span><h3>Argent & démarches</h3><p>Économiser, comprendre, ne rien laisser passer.</p><span class="count">3 articles</span></a>
-<a class="cat" href="cuisine.html"><span class="ci">🍳</span><h3>Cuisine & grand-mère</h3><p>Conserver, réussir, rattraper, ne rien gâcher.</p><span class="count">3 articles</span></a>
+<a class="cat" href="maison.html"><span class="ci has-illus" data-illus="menage"></span><h3>Maison & entretien</h3><p>Nettoyer, ranger, entretenir, faire durer.</p><span class="count">5 articles</span></a>
+<a class="cat" href="argent.html"><span class="ci has-illus" data-illus="argent"></span><h3>Argent & démarches</h3><p>Économiser, comprendre, ne rien laisser passer.</p><span class="count">5 articles</span></a>
+<a class="cat" href="cuisine.html"><span class="ci has-illus" data-illus="plat"></span><h3>Cuisine & grand-mère</h3><p>Conserver, réussir, rattraper, ne rien gâcher.</p><span class="count">5 articles</span></a>
 <a class="cat" href="#" onclick="return soon()"><span class="ci">🌿</span><h3>Jardin & plantes</h3><p>Faire pousser, soigner, récolter.</p><span class="count">Bientôt</span></a>
 <a class="cat" href="#" onclick="return soon()"><span class="ci">🔧</span><h3>Bricolage</h3><p>Réparer et fabriquer soi-même.</p><span class="count">Bientôt</span></a>
 <a class="cat" href="#" onclick="return soon()"><span class="ci">💻</span><h3>Numérique</h3><p>Smartphone, ordi, sécurité, gain de temps.</p><span class="count">Bientôt</span></a>
@@ -46,9 +46,9 @@
 <div class="wrap" id="populaires">
 <div class="section-label"><h2>Astuces du moment</h2><div class="ln"></div></div>
 <div class="arts">
-<a class="art" href="articles/enlever-taches-courantes.html"><div class="art-top">🧺<span class="art-cat">Maison</span></div><div class="art-body"><h3>Enlever 12 taches courantes (et pourquoi ça marche)</h3><p>Vin, gras, herbe, stylo, sang… le bon geste pour chaque tache, sans abîmer le tissu.</p><div class="art-foot"><span class="lvl easy">Facile</span> · 8 min de lecture</div></div></a>
-<a class="art" href="articles/reduire-frais-notaire.html"><div class="art-top">📜<span class="art-cat">Argent</span></div><div class="art-body"><h3>5 façons légales de réduire ses frais de notaire</h3><p>Ce que personne ne vous dit pour payer moins le jour de la signature.</p><div class="art-foot"><span class="lvl smart">Malin</span> · 7 min de lecture</div></div></a>
-<a class="art" href="articles/conserver-aliments-plus-longtemps.html"><div class="art-top">🥬<span class="art-cat">Cuisine</span></div><div class="art-body"><h3>Faire durer ses aliments 2× plus longtemps</h3><p>Où ranger quoi dans le frigo, et les erreurs qui font pourrir vos légumes.</p><div class="art-foot"><span class="lvl easy">Facile</span> · 9 min de lecture</div></div></a>
+<a class="art" href="articles/enlever-taches-courantes.html"><div class="art-top" data-illus="taches"><span class="art-cat">Maison</span></div><div class="art-body"><h3>Enlever 12 taches courantes (et pourquoi ça marche)</h3><p>Vin, gras, herbe, stylo, sang… le bon geste pour chaque tache, sans abîmer le tissu.</p><div class="art-foot"><span class="lvl easy">Facile</span> · 8 min de lecture</div></div></a>
+<a class="art" href="articles/reduire-frais-notaire.html"><div class="art-top" data-illus="argent"><span class="art-cat">Argent</span></div><div class="art-body"><h3>5 façons légales de réduire ses frais de notaire</h3><p>Ce que personne ne vous dit pour payer moins le jour de la signature.</p><div class="art-foot"><span class="lvl smart">Malin</span> · 7 min de lecture</div></div></a>
+<a class="art" href="articles/conserver-aliments-plus-longtemps.html"><div class="art-top" data-illus="aliments"><span class="art-cat">Cuisine</span></div><div class="art-body"><h3>Faire durer ses aliments 2× plus longtemps</h3><p>Où ranger quoi dans le frigo, et les erreurs qui font pourrir vos légumes.</p><div class="art-foot"><span class="lvl easy">Facile</span> · 9 min de lecture</div></div></a>
 </div>
 </div>
 
@@ -88,7 +88,13 @@ const ARTICLES=[
 {t:"Réduire ses factures d'énergie sans se priver",u:"articles/reduire-factures-energie.html",c:"Argent",k:"energie facture electricite gaz chauffage economiser consommation reduire"},
 {t:"Faire durer ses aliments 2× plus longtemps",u:"articles/conserver-aliments-plus-longtemps.html",c:"Cuisine",k:"conserver aliments frigo legumes fruits perimer gaspillage conservation"},
 {t:"Rattraper un plat raté",u:"articles/rattraper-plat-rate.html",c:"Cuisine",k:"rattraper plat rate trop sale epice piquant liquide brule sauce cuisine"},
-{t:"Réussir tous les œufs à tous les coups",u:"articles/cuisson-oeufs-parfaite.html",c:"Cuisine",k:"oeuf oeufs cuisson coque mollet dur poche brouille temps minutes"}
+{t:"Réussir tous les œufs à tous les coups",u:"articles/cuisson-oeufs-parfaite.html",c:"Cuisine",k:"oeuf oeufs cuisson coque mollet dur poche brouille temps minutes"},
+{t:"Déboucher un évier ou des WC sans produit chimique",u:"articles/deboucher-evier-wc-naturel.html",c:"Maison",k:"deboucher evier wc toilettes canalisation bouche siphon ventouse furet"},
+{t:"Faire durer son lave-linge et son lave-vaisselle",u:"articles/entretien-lave-linge-lave-vaisselle.html",c:"Maison",k:"entretien lave linge vaisselle machine filtre calcaire detartrer joint panne"},
+{t:"Comprendre sa feuille de paie",u:"articles/comprendre-feuille-de-paie.html",c:"Argent",k:"feuille paie bulletin salaire brut net cotisations impot prelevement source"},
+{t:"Résilier un abonnement ou un contrat",u:"articles/resilier-contrat-abonnement.html",c:"Argent",k:"resilier resiliation abonnement contrat assurance salle sport loi chatel preavis"},
+{t:"Épices et herbes : les bonnes associations",u:"articles/epices-herbes-associations.html",c:"Cuisine",k:"epices herbes aromates assaisonnement cumin curcuma basilic thym associations"},
+{t:"Cuisson des pâtes, riz et légumes",u:"articles/cuisson-feculents-legumes.html",c:"Cuisine",k:"cuisson pates riz legumes al dente temps eau sel feculents"}
 ];
 function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
 function search(){
@@ -103,4 +109,5 @@ function soon(){alert("Cette catégorie arrive très bientôt sur Wikinoo !");re
 document.addEventListener('click',e=>{if(!e.target.closest('nav')&&!e.target.closest('.burger')){const n=document.getElementById('nav');if(n)n.classList.remove('open')}});
 </script>
 <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+<script src="illus.js"></script>
 </body></html>
