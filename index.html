@@ -32,9 +32,9 @@
 <div class="wrap" id="categories">
 <div class="section-label"><h2>Explorer par catégorie</h2><div class="ln"></div></div>
 <div class="cats">
-<a class="cat" href="maison.html"><span class="ci">🏡</span><h3>Maison & entretien</h3><p>Nettoyer, ranger, entretenir, faire durer.</p><span class="count">Articles disponibles</span></a>
-<a class="cat" href="argent.html"><span class="ci">💰</span><h3>Argent & démarches</h3><p>Économiser, comprendre, ne rien laisser passer.</p><span class="count">Articles disponibles</span></a>
-<a class="cat" href="cuisine.html"><span class="ci">🍳</span><h3>Cuisine & grand-mère</h3><p>Conserver, réussir, rattraper, ne rien gâcher.</p><span class="count">Articles disponibles</span></a>
+<a class="cat" href="maison.html"><span class="ci">🏡</span><h3>Maison & entretien</h3><p>Nettoyer, ranger, entretenir, faire durer.</p><span class="count">3 articles</span></a>
+<a class="cat" href="argent.html"><span class="ci">💰</span><h3>Argent & démarches</h3><p>Économiser, comprendre, ne rien laisser passer.</p><span class="count">3 articles</span></a>
+<a class="cat" href="cuisine.html"><span class="ci">🍳</span><h3>Cuisine & grand-mère</h3><p>Conserver, réussir, rattraper, ne rien gâcher.</p><span class="count">3 articles</span></a>
 <a class="cat" href="#" onclick="return soon()"><span class="ci">🌿</span><h3>Jardin & plantes</h3><p>Faire pousser, soigner, récolter.</p><span class="count">Bientôt</span></a>
 <a class="cat" href="#" onclick="return soon()"><span class="ci">🔧</span><h3>Bricolage</h3><p>Réparer et fabriquer soi-même.</p><span class="count">Bientôt</span></a>
 <a class="cat" href="#" onclick="return soon()"><span class="ci">💻</span><h3>Numérique</h3><p>Smartphone, ordi, sécurité, gain de temps.</p><span class="count">Bientôt</span></a>
@@ -81,8 +81,14 @@
 <script>
 const ARTICLES=[
 {t:"Enlever 12 taches courantes",u:"articles/enlever-taches-courantes.html",c:"Maison",k:"tache taches vin gras herbe stylo sang vetement linge nettoyer detacher"},
+{t:"Nettoyer toute la maison avec 4 produits de base",u:"articles/nettoyer-maison-produits-base.html",c:"Maison",k:"nettoyer menage vinaigre bicarbonate savon noir citron produits naturel economique vitres"},
+{t:"Chasser les mauvaises odeurs durablement",u:"articles/eliminer-mauvaises-odeurs.html",c:"Maison",k:"odeur odeurs frigo canalisation poubelle linge cigarette desodoriser puanteur"},
 {t:"5 façons de réduire ses frais de notaire",u:"articles/reduire-frais-notaire.html",c:"Argent",k:"frais notaire reduire economiser achat immobilier mobilier negocier"},
-{t:"Faire durer ses aliments 2× plus longtemps",u:"articles/conserver-aliments-plus-longtemps.html",c:"Cuisine",k:"conserver aliments frigo legumes fruits perimer gaspillage conservation"}
+{t:"Capacité d'emprunt : combien pouvez-vous emprunter ?",u:"articles/capacite-emprunt-comprendre.html",c:"Argent",k:"capacite emprunt emprunter pret immobilier banque endettement revenus budget apport"},
+{t:"Réduire ses factures d'énergie sans se priver",u:"articles/reduire-factures-energie.html",c:"Argent",k:"energie facture electricite gaz chauffage economiser consommation reduire"},
+{t:"Faire durer ses aliments 2× plus longtemps",u:"articles/conserver-aliments-plus-longtemps.html",c:"Cuisine",k:"conserver aliments frigo legumes fruits perimer gaspillage conservation"},
+{t:"Rattraper un plat raté",u:"articles/rattraper-plat-rate.html",c:"Cuisine",k:"rattraper plat rate trop sale epice piquant liquide brule sauce cuisine"},
+{t:"Réussir tous les œufs à tous les coups",u:"articles/cuisson-oeufs-parfaite.html",c:"Cuisine",k:"oeuf oeufs cuisson coque mollet dur poche brouille temps minutes"}
 ];
 function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
 function search(){
