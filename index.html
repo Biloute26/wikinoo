@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wikinoo — Tous les trucs et astuces de la vie, expliqués clairement</title>
+<meta name="description" content="Wikinoo, le wiki des astuces du quotidien : maison, entretien, argent, cuisine, jardin, bricolage. Des conseils testés, classés par niveau et toujours expliqués.">
+<link rel="canonical" href="https://wikinoo.fr/">
+<meta property="og:title" content="Wikinoo — Les trucs et astuces de la vie"><meta property="og:description" content="Des astuces du quotidien claires, testées et expliquées."><meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Wikinoo","url":"https://wikinoo.fr/","description":"Le wiki des trucs et astuces de la vie."}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586059139929294" crossorigin="anonymous"></script>
+</head><body>
+<header class="site"><div class="wrap">
+<a href="index.html" class="logo"><span class="mark"><span>W</span></span> Wikinoo</a>
+<button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+<nav class="main" id="nav">
+<a href="index.html#categories">Catégories</a>
+<a href="maison.html">Maison</a>
+<a href="argent.html">Argent</a>
+<a href="cuisine.html">Cuisine</a>
+<a href="index.html#populaires">Populaires</a>
+</nav></div></header>
+<section class="hero"><div class="hero-doodle">💡</div><div class="wrap">
+<div class="kicker">Le wiki des astuces du quotidien</div>
+<h1>Tous les <em>trucs et astuces</em> de la vie, enfin expliqués clairement.</h1>
+<p>Maison, argent, cuisine, jardin, bricolage… Des conseils testés, classés par niveau, et surtout : on vous explique <em>pourquoi</em> ça marche.</p>
+<div class="hero-search"><span class="hs-ic">⌕</span><input type="text" id="q" placeholder="Chercher une astuce : taches, économies, conservation…" oninput="search()"></div>
+</div></section>
+
+<div class="wrap" id="searchResults" style="display:none;margin-top:24px"></div>
+
+<div class="wrap" id="categories">
+<div class="section-label"><h2>Explorer par catégorie</h2><div class="ln"></div></div>
+<div class="cats">
+<a class="cat" href="maison.html"><span class="ci">🏡</span><h3>Maison & entretien</h3><p>Nettoyer, ranger, entretenir, faire durer.</p><span class="count">Articles disponibles</span></a>
+<a class="cat" href="argent.html"><span class="ci">💰</span><h3>Argent & démarches</h3><p>Économiser, comprendre, ne rien laisser passer.</p><span class="count">Articles disponibles</span></a>
+<a class="cat" href="cuisine.html"><span class="ci">🍳</span><h3>Cuisine & grand-mère</h3><p>Conserver, réussir, rattraper, ne rien gâcher.</p><span class="count">Articles disponibles</span></a>
+<a class="cat" href="#" onclick="return soon()"><span class="ci">🌿</span><h3>Jardin & plantes</h3><p>Faire pousser, soigner, récolter.</p><span class="count">Bientôt</span></a>
+<a class="cat" href="#" onclick="return soon()"><span class="ci">🔧</span><h3>Bricolage</h3><p>Réparer et fabriquer soi-même.</p><span class="count">Bientôt</span></a>
+<a class="cat" href="#" onclick="return soon()"><span class="ci">💻</span><h3>Numérique</h3><p>Smartphone, ordi, sécurité, gain de temps.</p><span class="count">Bientôt</span></a>
+<a class="cat" href="#" onclick="return soon()"><span class="ci">🚗</span><h3>Auto & mobilité</h3><p>Entretenir sa voiture, rouler moins cher.</p><span class="count">Bientôt</span></a>
+<a class="cat" href="#" onclick="return soon()"><span class="ci">🌱</span><h3>Santé & bien-être</h3><p>Habitudes simples, remèdes de bon sens.</p><span class="count">Bientôt</span></a>
+</div>
+</div>
+
+<div class="wrap" id="populaires">
+<div class="section-label"><h2>Astuces du moment</h2><div class="ln"></div></div>
+<div class="arts">
+<a class="art" href="articles/enlever-taches-courantes.html"><div class="art-top">🧺<span class="art-cat">Maison</span></div><div class="art-body"><h3>Enlever 12 taches courantes (et pourquoi ça marche)</h3><p>Vin, gras, herbe, stylo, sang… le bon geste pour chaque tache, sans abîmer le tissu.</p><div class="art-foot"><span class="lvl easy">Facile</span> · 8 min de lecture</div></div></a>
+<a class="art" href="articles/reduire-frais-notaire.html"><div class="art-top">📜<span class="art-cat">Argent</span></div><div class="art-body"><h3>5 façons légales de réduire ses frais de notaire</h3><p>Ce que personne ne vous dit pour payer moins le jour de la signature.</p><div class="art-foot"><span class="lvl smart">Malin</span> · 7 min de lecture</div></div></a>
+<a class="art" href="articles/conserver-aliments-plus-longtemps.html"><div class="art-top">🥬<span class="art-cat">Cuisine</span></div><div class="art-body"><h3>Faire durer ses aliments 2× plus longtemps</h3><p>Où ranger quoi dans le frigo, et les erreurs qui font pourrir vos légumes.</p><div class="art-foot"><span class="lvl easy">Facile</span> · 9 min de lecture</div></div></a>
+</div>
+</div>
+
+<div class="wrap"><div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2586059139929294" data-ad-slot="0000000000" data-ad-format="auto" data-full-width-responsive="true"></ins></div></div>
+
+<div class="container" style="margin-top:40px">
+<div class="section-label" style="margin-top:10px"><h2>Pourquoi Wikinoo ?</h2><div class="ln"></div></div>
+<div class="prose">
+<p>Internet déborde de listes d'astuces vite faites, souvent recopiées les unes sur les autres, et qui ne marchent qu'à moitié. Wikinoo prend le parti inverse : chaque astuce est <strong>testée, expliquée et remise dans son contexte</strong>. On ne se contente pas de dire « mettez du bicarbonate » — on vous explique pourquoi le bicarbonate agit, quand il ne faut surtout pas l'utiliser, et quelle est la meilleure méthode selon votre situation.</p>
+<p>Chaque conseil porte un <strong>niveau</strong> — facile, malin ou expert — pour que vous sachiez d'un coup d'œil ce que ça demande. Et tout est gratuit, sans inscription. L'objectif est simple : que vous repartiez en sachant faire, et en ayant compris.</p>
+</div>
+</div>
+
+<footer class="site"><div class="wrap">
+<div class="cols">
+<div><div class="flogo">Wikinoo</div><p class="fdesc">Le wiki des trucs et astuces de la vie. Des conseils clairs, testés et expliqués — pour la maison, l'argent, la cuisine et tout le reste du quotidien.</p></div>
+<div><h4>Catégories</h4>
+<a href="maison.html">Maison & entretien</a>
+<a href="argent.html">Argent & démarches</a>
+<a href="cuisine.html">Cuisine & grand-mère</a></div>
+<div><h4>Découvrir</h4>
+<a href="index.html#categories">Toutes les catégories</a>
+<a href="index.html#populaires">Astuces populaires</a></div>
+<div><h4>À propos</h4>
+<a href="index.html">Accueil</a>
+<a href="mentions-legales.html">Mentions légales</a></div>
+</div>
+<div class="disc">Les conseils publiés sur Wikinoo sont fournis à titre informatif et testés avec soin, mais ne remplacent pas l'avis d'un professionnel (médecin, artisan, conseiller financier) lorsque la situation l'exige. Suivez toujours les consignes de sécurité des fabricants. © 2026 Wikinoo — Tous droits réservés.</div>
+</div></footer>
+<script>
+const ARTICLES=[
+{t:"Enlever 12 taches courantes",u:"articles/enlever-taches-courantes.html",c:"Maison",k:"tache taches vin gras herbe stylo sang vetement linge nettoyer detacher"},
+{t:"5 façons de réduire ses frais de notaire",u:"articles/reduire-frais-notaire.html",c:"Argent",k:"frais notaire reduire economiser achat immobilier mobilier negocier"},
+{t:"Faire durer ses aliments 2× plus longtemps",u:"articles/conserver-aliments-plus-longtemps.html",c:"Cuisine",k:"conserver aliments frigo legumes fruits perimer gaspillage conservation"}
+];
+function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function search(){
+  const q=norm(document.getElementById('q').value.trim());const box=document.getElementById('searchResults');
+  if(!q){box.style.display='none';return;}
+  const res=ARTICLES.filter(a=>norm(a.t+' '+a.k).includes(q));
+  box.style.display='block';
+  if(!res.length){box.innerHTML='<p style="color:var(--muted);padding:10px">Aucune astuce trouvée pour « '+document.getElementById('q').value+' ». De nouvelles arrivent chaque semaine !</p>';return;}
+  box.innerHTML='<div class="arts">'+res.map(a=>'<a class="art" href="'+a.u+'"><div class="art-top">🔎<span class="art-cat">'+a.c+'</span></div><div class="art-body"><h3>'+a.t+'</h3></div></a>').join('')+'</div>';
+}
+function soon(){alert("Cette catégorie arrive très bientôt sur Wikinoo !");return false;}
+document.addEventListener('click',e=>{if(!e.target.closest('nav')&&!e.target.closest('.burger')){const n=document.getElementById('nav');if(n)n.classList.remove('open')}});
+</script>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</body></html>
