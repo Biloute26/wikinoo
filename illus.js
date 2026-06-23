@@ -216,7 +216,51 @@ const ILLUS={
     <path d="M340 130 h120 l-16 190 h-88 z" fill="#fff" stroke="${PAL.line}" stroke-width="2"/>
     <path d="M348 230 h104 l-10 90 h-84 z" fill="${PAL.sky}" opacity="0.55"/>
     <path d="M560 160 q40 50 0 90 q-40 -40 0 -90 z" fill="${PAL.sky}" opacity="0.7"/>
-    <ellipse cx="400" cy="330" rx="120" ry="16" fill="${PAL.sky}" opacity="0.12"/>`)
+    <ellipse cx="400" cy="330" rx="120" ry="16" fill="${PAL.sky}" opacity="0.12"/>`),
+
+  // ===== Transports & Paris =====
+  transport:()=>svgWrap(`
+    <circle cx="650" cy="90" r="120" fill="${PAL.sky}" opacity="0.12"/>
+    <rect x="250" y="120" width="300" height="150" rx="24" fill="${PAL.ink}"/>
+    <rect x="270" y="140" width="120" height="70" rx="8" fill="${PAL.sky}" opacity="0.5"/><rect x="410" y="140" width="120" height="70" rx="8" fill="${PAL.sky}" opacity="0.5"/>
+    <circle cx="300" cy="285" r="26" fill="${PAL.ink2}"/><circle cx="300" cy="285" r="10" fill="${PAL.line}"/>
+    <circle cx="500" cy="285" r="26" fill="${PAL.ink2}"/><circle cx="500" cy="285" r="10" fill="${PAL.line}"/>
+    <rect x="250" y="232" width="300" height="14" fill="${PAL.ocre}"/>
+    <path d="M180 300 h440" stroke="${PAL.ink}" stroke-width="6" stroke-linecap="round" opacity="0.25"/>`),
+  // Métro / M
+  metro:()=>svgWrap(`
+    <circle cx="160" cy="100" r="100" fill="${PAL.ink2}" opacity="0.08"/>
+    <circle cx="400" cy="190" r="100" fill="url(#ocg)"/>
+    <text x="400" y="232" font-size="120" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700">M</text>
+    <rect x="250" y="310" width="300" height="14" rx="7" fill="${PAL.ink}" opacity="0.12"/>
+    <circle cx="610" cy="120" r="14" fill="${PAL.ocre}" opacity="0.6"/><circle cx="650" cy="150" r="9" fill="${PAL.ocre}" opacity="0.4"/>`),
+  // Bus
+  bus:()=>svgWrap(`
+    <circle cx="650" cy="280" r="110" fill="${PAL.green}" opacity="0.10"/>
+    <rect x="220" y="120" width="360" height="150" rx="20" fill="${PAL.ocre2}"/>
+    <rect x="240" y="140" width="80" height="60" rx="6" fill="${PAL.sky}" opacity="0.6"/><rect x="330" y="140" width="80" height="60" rx="6" fill="${PAL.sky}" opacity="0.6"/><rect x="420" y="140" width="80" height="60" rx="6" fill="${PAL.sky}" opacity="0.6"/>
+    <rect x="510" y="140" width="55" height="110" rx="6" fill="${PAL.ink}" opacity="0.3"/>
+    <circle cx="300" cy="285" r="28" fill="${PAL.ink}"/><circle cx="300" cy="285" r="11" fill="${PAL.line}"/>
+    <circle cx="500" cy="285" r="28" fill="${PAL.ink}"/><circle cx="500" cy="285" r="11" fill="${PAL.line}"/>
+    <rect x="220" y="232" width="360" height="12" fill="${PAL.ink}"/>`),
+  // Aéroport / avion
+  aeroport:()=>svgWrap(`
+    <circle cx="160" cy="100" r="100" fill="${PAL.sky}" opacity="0.14"/>
+    <path d="M250 280 l300 -90 q40 -12 50 8 q8 18 -28 30 l-300 92 z" fill="url(#ocg)"/>
+    <path d="M330 256 l-40 -70 h34 l66 56 z" fill="${PAL.ink}"/>
+    <path d="M470 214 l-30 -110 h30 l66 96 z" fill="${PAL.ink2}"/>
+    <path d="M250 280 l-50 6 l30 -28 z" fill="${PAL.ink}"/>
+    <path d="M180 320 h300" stroke="${PAL.sky}" stroke-width="6" stroke-dasharray="18 14" stroke-linecap="round" opacity="0.5"/>`),
+  // Paris / carte / monuments (tour Eiffel stylisée + repères)
+  paris:()=>svgWrap(`
+    <circle cx="640" cy="100" r="120" fill="${PAL.ocre}" opacity="0.10"/>
+    <path d="M400 80 l34 200 h-68 z" fill="none" stroke="${PAL.ink}" stroke-width="9"/>
+    <path d="M381 190 h38 M372 250 h56" stroke="${PAL.ink}" stroke-width="9"/>
+    <path d="M366 280 l34 -200 l34 200" fill="none" stroke="${PAL.ink}" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M400 60 v20" stroke="${PAL.ocre2}" stroke-width="8" stroke-linecap="round"/>
+    <path d="M210 230 a26 26 0 1 1 0 0.1 z" fill="url(#ocg)"/><circle cx="210" cy="228" r="22" fill="url(#ocg)"/><circle cx="210" cy="222" r="8" fill="#fff"/><path d="M210 250 l-12 24 h24 z" fill="${PAL.ocre2}"/>
+    <circle cx="600" cy="250" r="22" fill="${PAL.sky}"/><circle cx="600" cy="244" r="8" fill="#fff"/><path d="M600 272 l-12 24 h24 z" fill="${PAL.ink2}"/>
+    <ellipse cx="400" cy="320" rx="200" ry="18" fill="${PAL.ink}" opacity="0.08"/>`)
 };
 
 // Applique les illustrations : remplace les .art-hero-img[data-illus] et .art-top[data-illus]
