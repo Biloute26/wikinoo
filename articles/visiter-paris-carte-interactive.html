@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Visiter Paris : la carte interactive des monuments, musées et lieux incroyables | Wikinoo</title>
+<meta name="description" content="Une carte interactive de Paris avec plus de 50 lieux à voir : monuments, musées, points de vue, jardins, lieux insolites et quartiers, chacun avec la station de métro la plus proche et pourquoi y aller.">
+<link rel="canonical" href="https://wikinoo.fr/articles/visiter-paris-carte-interactive.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<style>
+#wkmap{height:560px;width:100%;border-radius:14px;border:1px solid var(--line,#C9BFA8);z-index:1}
+@media(max-width:680px){#wkmap{height:460px}}
+.mapfilters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.mapfilters button{font-family:inherit;font-size:13.5px;font-weight:600;padding:8px 14px;border-radius:999px;border:1.5px solid var(--line,#C9BFA8);background:#fff;color:#26282B;cursor:pointer;display:flex;align-items:center;gap:7px;transition:.15s}
+.mapfilters button .dot{width:11px;height:11px;border-radius:50%}
+.mapfilters button.off{opacity:.4}
+.mapfilters button:hover{border-color:#1B3A5B}
+.mapwrap{margin:24px 0}
+.leaflet-popup-content{font-family:Inter,sans-serif}
+.wkpop b{font-family:Fraunces,Georgia,serif;font-size:15px;color:#1B3A5B;display:block;margin-bottom:3px}
+.wkpop .wkm{font-size:12px;color:#2E7D52;font-weight:600;margin:4px 0;display:block}
+.wkpop .wkd{font-size:13px;color:#43464B;line-height:1.5}
+.maphint{font-size:13px;color:var(--muted,#6E7178);margin-top:10px;text-align:center}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586059139929294" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Visiter Paris : la carte interactive des lieux à voir", "publisher": {"@type": "Organization", "name": "Wikinoo"}}</script>
+</head><body>
+<header class="site"><div class="wrap">
+<a href="../index.html" class="logo"><span class="mark"><span>W</span></span> Wikinoo</a>
+<button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+<nav class="main" id="nav">
+<a href="../index.html#categories">Catégories</a>
+<a href="../maison.html">Maison</a>
+<a href="../argent.html">Argent</a>
+<a href="../cuisine.html">Cuisine</a>
+<a href="../bricolage.html">Bricolage</a>
+<a href="../jardin.html">Jardin</a>
+<a href="../numerique.html">Numérique</a>
+<a href="../auto.html">Auto</a>
+<a href="../sante.html">Santé</a>
+<a href="../transports.html">Transports</a>
+</nav></div></header>
+<div class="container art-head">
+<div class="crumb"><a href="../index.html">Accueil</a> › <a href="../transports.html">Transports & Paris</a> › Carte interactive de Paris</div>
+<div class="art-meta"><span class="lvl easy">Facile</span><span>·</span><span>10 min de lecture</span><span>·</span><span>Catégorie : Transports & Paris</span></div>
+<h1>Visiter Paris : la carte interactive des lieux à voir</h1>
+</div>
+<div class="container">
+<div class="art-hero-img" data-illus="paris"></div>
+<div class="prose">
+<p>Paris regorge de lieux à voir, et il est facile de s'y perdre — ou de passer à côté de merveilles méconnues. Cette carte interactive rassemble plus de cinquante lieux incontournables et secrets, classés par type. Cliquez sur un marqueur pour savoir pourquoi y aller et quelle est la station la plus proche.</p>
+
+<div class="mapwrap">
+<div class="mapfilters" id="mapfilters"></div>
+<div id="wkmap"></div>
+<p class="maphint">Cliquez sur un marqueur pour les infos et la station la plus proche. Filtrez par type de lieu ci-dessus.</p>
+</div>
+
+
+<div class="why"><div class="why-t">🗺️ Comment utiliser la carte</div><p>Chaque <strong>couleur</strong> correspond à un type de lieu : monuments, musées, points de vue, jardins, lieux insolites, quartiers et gares. Utilisez les <strong>filtres</strong> au-dessus de la carte pour n'afficher que ce qui vous intéresse, puis cliquez sur un marqueur : vous y trouverez une courte description et la <strong>station la plus proche</strong>. La carte utilise OpenStreetMap, libre et gratuit.</p></div>
+
+<h2>Les incontournables (monuments)</h2>
+
+<p>Tour Eiffel, Arc de Triomphe, Notre-Dame, Sacré-Cœur, Panthéon, Sainte-Chapelle, Opéra Garnier… Ce sont les images mêmes de Paris. Conseil : réservez en ligne pour les plus courus (tour Eiffel, Sainte-Chapelle) afin d'éviter des heures de file, et privilégiez tôt le matin ou en fin de journée pour la lumière et les foules moindres.</p>
+
+<h2>Les grands musées</h2>
+
+<p>Le Louvre (prévoyez une demi-journée et choisissez vos salles à l'avance), Orsay et ses impressionnistes, l'Orangerie et les Nymphéas, Rodin et son jardin, le quai Branly… Beaucoup de musées sont gratuits le premier dimanche du mois, mais aussi plus fréquentés ce jour-là. Pensez aussi aux musées municipaux, souvent gratuits en collection permanente.</p>
+
+<div class="tipbox"><div class="tb-t">💡 La carte n'est pas qu'une liste de cases à cocher</div><p>Le vrai plaisir de Paris se trouve souvent entre les monuments : flâner le long de la Seine, se perdre dans le Marais ou Montmartre, prendre un café en terrasse. Utilisez les marqueurs « quartiers » et « insolite » de la carte pour ralentir et savourer la ville, pas seulement la photographier.</p></div>
+
+<h2>Les points de vue (souvent gratuits)</h2>
+
+<p>On pense à la tour Eiffel ou à la tour Montparnasse, mais Paris offre de superbes panoramas gratuits : le parvis du Sacré-Cœur, les toits-terrasses des grands magasins (Galeries Lafayette, Printemps), la terrasse de l'Institut du Monde Arabe, ou les hauteurs de Belleville et des Buttes-Chaumont. La carte les rassemble sous le filtre « points de vue ».</p>
+
+<h2>Jardins, insolite et quartiers</h2>
+
+<p>Pour souffler : le Luxembourg, les Tuileries, les Buttes-Chaumont, la coulée verte. Pour l'insolite : les catacombes, les passages couverts, le Père-Lachaise, le canal Saint-Martin, l'île Saint-Louis. Et pour s'imprégner de l'âme de la ville : Montmartre, le Marais, le Quartier latin, la Butte-aux-Cailles. Tout est sur la carte, filtrable d'un clic.</p>
+
+<div class="warn"><div class="tb-t">⚠️ Bon à savoir avant de partir</div><p>Les horaires, tarifs et jours de fermeture des sites changent souvent, et certains lieux ferment pour travaux (c'est le cas d'un grand musée d'art moderne). Vérifiez toujours sur le site officiel du lieu avant de vous déplacer. Respectez aussi les lieux habités (certaines rues photogéniques sont résidentielles) et les sites de recueillement comme les cimetières.</p></div>
+
+<div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2586059139929294" data-ad-slot="0000000000" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+
+<div class="toolcta"><div class="tc-ic">🚇</div><div class="tc-txt"><h4>Comment y aller ?</h4><p>Métro, bus, RER : choisissez le bon transport pour rejoindre chaque lieu.</p></div><a class="tc-btn" href="se-deplacer-paris-metro-bus-rer.html">Lire le guide</a></div>
+
+<h2>Questions fréquentes</h2>
+<div class="faq">
+<details><summary>La carte fonctionne-t-elle sur mobile ?</summary><p>Oui, la carte est adaptée aux écrans de téléphone : vous pouvez zoomer, vous déplacer, filtrer par type de lieu et toucher un marqueur pour voir les informations.</p></details>
+<details><summary>Les informations de la carte sont-elles à jour ?</summary><p>Les lieux et stations sont fiables, mais les horaires, tarifs et fermetures évoluent. Vérifiez toujours sur le site officiel du lieu avant de vous y rendre, surtout pour les musées (certains ferment pour travaux).</p></details>
+<details><summary>Comment rejoindre un lieu de la carte ?</summary><p>Chaque marqueur indique la station de métro ou de RER la plus proche. Pour choisir le meilleur mode de transport, consultez notre guide « Se déplacer dans Paris ».</p></details>
+<details><summary>Quels lieux voir en priorité avec peu de temps ?</summary><p>Pour une première fois : tour Eiffel, Notre-Dame et l'île de la Cité, le Louvre ou Orsay, Montmartre et le Sacré-Cœur, puis une flânerie dans le Marais ou le long de la Seine. La carte vous aide à les situer et à organiser un parcours logique.</p></details>
+</div>
+
+<div class="related"><div class="section-label" style="margin-top:0"><h2>À lire aussi</h2><div class="ln"></div></div>
+<div class="arts">
+<a class="art" href="se-deplacer-paris-metro-bus-rer.html"><div class="art-top">🚇<span class="art-cat">Transports</span></div><div class="art-body"><h3>Se déplacer dans Paris : quel mode choisir</h3></div></a>
+<a class="art" href="paris-pratique-malin-visiteur.html"><div class="art-top">🧭<span class="art-cat">Transports</span></div><div class="art-body"><h3>Paris pratique : conseils malins pour visiter</h3></div></a>
+</div></div>
+</div>
+<footer class="site"><div class="wrap">
+<div class="cols">
+<div><div class="flogo">Wikinoo</div><p class="fdesc">Le wiki des trucs et astuces de la vie. Des conseils clairs, testés et expliqués — pour la maison, l'argent, la cuisine et tout le reste du quotidien.</p></div>
+<div><h4>Catégories</h4>
+<a href="../maison.html">Maison & entretien</a>
+<a href="../argent.html">Argent & démarches</a>
+<a href="../cuisine.html">Cuisine & grand-mère</a>
+<a href="../bricolage.html">Bricolage</a>
+<a href="../jardin.html">Jardin & plantes</a>
+<a href="../numerique.html">Numérique</a>
+<a href="../auto.html">Auto & mobilité</a>
+<a href="../sante.html">Santé & bien-être</a>
+<a href="../transports.html">Transports & Paris</a></div>
+<div><h4>Découvrir</h4>
+<a href="../index.html#categories">Toutes les catégories</a>
+<a href="../index.html#populaires">Astuces populaires</a></div>
+<div><h4>À propos</h4>
+<a href="../index.html">Accueil</a>
+<a href="../mentions-legales.html">Mentions légales</a></div>
+</div>
+<div class="disc">Les conseils publiés sur Wikinoo sont fournis à titre informatif et testés avec soin, mais ne remplacent pas l'avis d'un professionnel (médecin, artisan, conseiller financier) lorsque la situation l'exige. Les informations pratiques (tarifs, horaires, lignes de transport) peuvent évoluer : vérifiez toujours auprès des sources officielles avant un déplacement. © 2026 Wikinoo — Tous droits réservés.</div>
+</div></footer>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+<script>document.addEventListener('click',e=>{if(!e.target.closest('nav')&&!e.target.closest('.burger')){const n=document.getElementById('nav');if(n)n.classList.remove('open')}});</script>
+<script src="../illus.js"></script>
+<script>
+(function(){
+  const SITES=[
+    {nom:'Wikinoo — astuces',url:'https://biloute26.github.io/wikinoo/',ic:'💡'},
+    {nom:'Calculateurs immobiliers',url:'https://biloute26.github.io/immo/',ic:'🏠'},
+    {nom:'Outils administratifs',url:'https://biloute26.github.io/outils-administratifs/',ic:'📋'},
+    {nom:'Outils pratiques du quotidien',url:'https://biloute26.github.io/Outils-pratiques-du-Quotidien/',ic:'🧰'}
+  ];
+  const HERE=location.href.replace(/index\.html$/,'').replace(/articles\/.*$/,'');
+  const css=`#netTab{position:fixed;left:0;top:36%;z-index:9000;font-family:'Inter',sans-serif}
+  #netTab .nt-toggle{position:absolute;left:0;top:0;background:#1B3A5B;color:#fff;border:none;border-right:2px solid #E8A33D;writing-mode:vertical-rl;text-orientation:mixed;padding:14px 8px;border-radius:0 10px 10px 0;cursor:pointer;font-size:13px;font-weight:600;letter-spacing:.05em;box-shadow:2px 2px 10px rgba(0,0,0,.15)}
+  #netTab .nt-toggle:hover{background:#274C72}
+  #netTab .nt-panel{position:absolute;left:-320px;top:0;width:290px;background:#fff;border:1px solid #E3DDCE;border-left:3px solid #E8A33D;border-radius:0 12px 12px 0;box-shadow:4px 6px 24px rgba(27,58,91,.18);padding:16px;transition:left .28s ease;opacity:0;pointer-events:none}
+  #netTab.open .nt-panel{left:46px;opacity:1;pointer-events:auto}
+  #netTab .nt-title{font-family:'Fraunces',Georgia,serif;font-size:15px;color:#1B3A5B;font-weight:600;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid #F2EEE3}
+  #netTab a.nt-link{display:flex;align-items:center;gap:10px;padding:10px;border-radius:9px;color:#26282B;text-decoration:none;font-size:14px}
+  #netTab a.nt-link:hover{background:#F2EEE3}
+  #netTab a.nt-link .nt-ic{width:30px;height:30px;border-radius:7px;background:#F2EEE3;display:grid;place-items:center;font-size:16px;flex-shrink:0}
+  #netTab a.nt-link.current{opacity:.5;pointer-events:none}
+  #netTab a.nt-link.current:after{content:'(vous etes ici)';font-size:11px;color:#6E7178;margin-left:auto}
+  @media(max-width:680px){#netTab{top:auto;bottom:80px}#netTab .nt-panel{width:240px;top:auto;bottom:0;max-height:70vh;overflow-y:auto}#netTab.open .nt-panel{left:42px}}`;
+  const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
+  const wrap=document.createElement('div');wrap.id='netTab';
+  let links='';
+  SITES.forEach(s=>{const cur=HERE.indexOf(s.url)===0||s.url.indexOf(HERE)===0;links+='<a class="nt-link'+(cur?' current':'')+'" href="'+s.url+'"><span class="nt-ic">'+s.ic+'</span><span>'+s.nom+'</span></a>';});
+  wrap.innerHTML='<button class="nt-toggle" aria-label="Nos autres sites">+ Nos sites</button><div class="nt-panel"><p class="nt-title">Nos autres sites</p>'+links+'</div>';
+  document.body.appendChild(wrap);
+  wrap.querySelector('.nt-toggle').addEventListener('click',()=>wrap.classList.toggle('open'));
+  document.addEventListener('click',e=>{if(!wrap.contains(e.target))wrap.classList.remove('open');});
+})();
+</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function(){
+var LIEUX=[{"n": "Tour Eiffel", "la": 48.8584, "lo": 2.2945, "c": "monument", "m": "Bir-Hakeim (6) · RER C Champ de Mars", "d": "L'icône de Paris. Montée jusqu'au sommet à 276 m. Réservez en ligne pour éviter des heures de queue."}, {"n": "Arc de Triomphe", "la": 48.8738, "lo": 2.295, "c": "monument", "m": "Charles de Gaulle–Étoile (1,2,6, RER A)", "d": "Au sommet des Champs-Élysées. La terrasse offre une vue dégagée sur les 12 avenues en étoile."}, {"n": "Notre-Dame de Paris", "la": 48.853, "lo": 2.3499, "c": "monument", "m": "Cité (4) · Saint-Michel (RER B,C)", "d": "La cathédrale gothique rouverte après l'incendie de 2019. Le parvis et l'île de la Cité valent à eux seuls le détour."}, {"n": "Sacré-Cœur de Montmartre", "la": 48.8867, "lo": 2.3431, "c": "monument", "m": "Anvers (2) · Abbesses (12)", "d": "Basilique blanche dominant Paris. L'esplanade est l'un des plus beaux points de vue gratuits de la ville."}, {"n": "Panthéon", "la": 48.8462, "lo": 2.3464, "c": "monument", "m": "Cardinal Lemoine (10) · RER B Luxembourg", "d": "Nécropole des grands hommes et femmes de la République. Crypte et coupole accessibles, vue sur le Quartier latin."}, {"n": "Sainte-Chapelle", "la": 48.8554, "lo": 2.345, "c": "monument", "m": "Cité (4)", "d": "Joyau gothique aux 1 113 vitraux qui inondent la chapelle haute de lumière colorée. Petit mais saisissant."}, {"n": "Opéra Garnier", "la": 48.872, "lo": 2.3316, "c": "monument", "m": "Opéra (3,7,8) · Auber (RER A)", "d": "Chef-d'œuvre du Second Empire : grand escalier, plafond de Chagall. Visite libre en journée hors représentations."}, {"n": "Hôtel des Invalides", "la": 48.8566, "lo": 2.3127, "c": "monument", "m": "La Tour-Maubourg (8) · Invalides (8,13)", "d": "Dôme doré abritant le tombeau de Napoléon et le musée de l'Armée."}, {"n": "Conciergerie", "la": 48.8559, "lo": 2.3461, "c": "monument", "m": "Cité (4)", "d": "Ancienne prison révolutionnaire sur l'île de la Cité, où fut détenue Marie-Antoinette."}, {"n": "Tour Montparnasse", "la": 48.8421, "lo": 2.3219, "c": "monument", "m": "Montparnasse-Bienvenüe (4,6,12,13)", "d": "La terrasse du 56e étage offre la meilleure vue sur Paris… avec la tour Eiffel dans le cadre."}, {"n": "Colonne de Juillet (Bastille)", "la": 48.8531, "lo": 2.3692, "c": "monument", "m": "Bastille (1,5,8)", "d": "Place emblématique de la Révolution, cœur d'un quartier animé jour et nuit."}, {"n": "Grand Palais", "la": 48.8661, "lo": 2.3125, "c": "monument", "m": "Champs-Élysées–Clemenceau (1,13)", "d": "Nef monumentale de verre et d'acier accueillant grandes expositions et événements."}, {"n": "Musée du Louvre", "la": 48.8606, "lo": 2.3376, "c": "musee", "m": "Palais Royal–Musée du Louvre (1,7)", "d": "Le plus grand musée du monde. La Joconde, la Vénus de Milo… Prévoyez une demi-journée minimum et réservez."}, {"n": "Musée d'Orsay", "la": 48.86, "lo": 2.3266, "c": "musee", "m": "Solférino (12) · RER C Musée d'Orsay", "d": "Les impressionnistes (Monet, Renoir, Van Gogh) dans une ancienne gare splendide. Plus digeste que le Louvre."}, {"n": "Centre Pompidou", "la": 48.8607, "lo": 2.3522, "c": "musee", "m": "Rambuteau (11) · Hôtel de Ville (1,11)", "d": "Art moderne et contemporain dans le bâtiment aux tuyaux colorés. Note : fermeture pour travaux annoncée, vérifiez avant d'y aller."}, {"n": "Musée de l'Orangerie", "la": 48.8638, "lo": 2.3226, "c": "musee", "m": "Concorde (1,8,12)", "d": "Les Nymphéas de Monet dans deux salles ovales conçues pour eux. Une parenthèse hors du temps."}, {"n": "Musée Rodin", "la": 48.8553, "lo": 2.3158, "c": "musee", "m": "Varenne (13)", "d": "Sculptures de Rodin (Le Penseur, Le Baiser) dans un hôtel particulier et son jardin de roses."}, {"n": "Musée du quai Branly", "la": 48.8611, "lo": 2.2975, "c": "musee", "m": "Alma–Marceau (9) · RER C Pont de l'Alma", "d": "Arts d'Afrique, d'Asie, d'Océanie et des Amériques, au pied de la tour Eiffel. Mur végétal spectaculaire."}, {"n": "Musée Picasso", "la": 48.8598, "lo": 2.3622, "c": "musee", "m": "Saint-Paul (1) · Chemin Vert (8)", "d": "La plus grande collection Picasso au monde, dans un bel hôtel du Marais."}, {"n": "Musée de Cluny (Moyen Âge)", "la": 48.8504, "lo": 2.3437, "c": "musee", "m": "Cluny–La Sorbonne (10)", "d": "La Dame à la licorne et les thermes gallo-romains, au cœur du Quartier latin."}, {"n": "Cité des sciences (La Villette)", "la": 48.8957, "lo": 2.388, "c": "musee", "m": "Porte de la Villette (7)", "d": "Le plus grand musée scientifique d'Europe, idéal en famille. Géode et sous-marin Argonaute à côté."}, {"n": "Musée Carnavalet (Histoire de Paris)", "la": 48.8575, "lo": 2.3626, "c": "musee", "m": "Saint-Paul (1)", "d": "L'histoire de Paris de la préhistoire à nos jours. Entrée gratuite pour les collections permanentes."}, {"n": "Atelier des Lumières", "la": 48.8607, "lo": 2.3797, "c": "musee", "m": "Saint-Maur (3) · Rue Saint-Maur", "d": "Expositions immersives projetées sur les murs d'une ancienne fonderie. Spectaculaire."}, {"n": "Fondation Louis Vuitton", "la": 48.8766, "lo": 2.2633, "c": "musee", "m": "Les Sablons (1) puis navette", "d": "Vaisseau de verre signé Frank Gehry au bois de Boulogne, art contemporain et architecture."}, {"n": "Parvis du Sacré-Cœur", "la": 48.8865, "lo": 2.343, "c": "vue", "m": "Anvers (2)", "d": "Vue panoramique gratuite sur tout Paris depuis les marches de Montmartre. Magique au coucher du soleil."}, {"n": "Terrasse des Galeries Lafayette", "la": 48.8738, "lo": 2.332, "c": "vue", "m": "Chaussée d'Antin–La Fayette (7,9)", "d": "Toit-terrasse gratuit du grand magasin : vue dégagée sur l'Opéra et la tour Eiffel."}, {"n": "Printemps Haussmann (rooftop)", "la": 48.8744, "lo": 2.3276, "c": "vue", "m": "Havre-Caumartin (3,9)", "d": "Terrasse panoramique gratuite avec une des plus belles vues sur les toits de Paris."}, {"n": "Institut du Monde Arabe (terrasse)", "la": 48.8484, "lo": 2.3573, "c": "vue", "m": "Jussieu (7,10)", "d": "Terrasse gratuite au 9e étage : vue sur la Seine, Notre-Dame et l'île Saint-Louis."}, {"n": "Centre Pompidou (vue)", "la": 48.8606, "lo": 2.3524, "c": "vue", "m": "Rambuteau (11)", "d": "L'escalator extérieur et le dernier étage offrent une belle perspective sur Paris (selon ouverture)."}, {"n": "Parc de Belleville", "la": 48.8717, "lo": 2.3849, "c": "vue", "m": "Pyrénées (11) · Couronnes (2)", "d": "L'un des points les plus hauts de Paris, vue panoramique méconnue et gratuite, loin des foules."}, {"n": "Jardin du Luxembourg", "la": 48.8462, "lo": 2.3372, "c": "jardin", "m": "RER B Luxembourg · Odéon (4,10)", "d": "Le jardin préféré des Parisiens : bassin, chaises, ruches, vergers. Parfait pour une pause."}, {"n": "Jardin des Tuileries", "la": 48.8634, "lo": 2.3275, "c": "jardin", "m": "Tuileries (1) · Concorde (1,8,12)", "d": "Entre le Louvre et la Concorde. Allées, bassins et statues ; grande roue et fête foraine l'été."}, {"n": "Parc des Buttes-Chaumont", "la": 48.8809, "lo": 2.3826, "c": "jardin", "m": "Buttes Chaumont (7bis) · Botzaris (7bis)", "d": "Le plus romantique : falaises, cascade, temple perché sur un îlot. Vallonné et sauvage."}, {"n": "Bois de Vincennes", "la": 48.8283, "lo": 2.435, "c": "jardin", "m": "Château de Vincennes (1)", "d": "Le grand poumon vert de l'est : lac, zoo, château médiéval, parc floral."}, {"n": "Jardin des Plantes", "la": 48.8443, "lo": 2.3597, "c": "jardin", "m": "Jussieu (7,10) · Gare d'Austerlitz", "d": "Jardin botanique historique, ménagerie, et la Grande Galerie de l'Évolution."}, {"n": "Coulée verte René-Dumont", "la": 48.8492, "lo": 2.3713, "c": "jardin", "m": "Bastille (1,5,8) · Daumesnil (6,8)", "d": "Promenade plantée sur un ancien viaduc ferroviaire, ancêtre de la High Line new-yorkaise."}, {"n": "Square du Vert-Galant", "la": 48.8567, "lo": 2.3404, "c": "jardin", "m": "Pont Neuf (7)", "d": "À la pointe de l'île de la Cité, au ras de la Seine : un coin secret et paisible."}, {"n": "Catacombes de Paris", "la": 48.8338, "lo": 2.3324, "c": "insolite", "m": "Denfert-Rochereau (4,6, RER B)", "d": "Ossuaire souterrain où reposent les restes de millions de Parisiens. Glaçant et fascinant. Réservation conseillée."}, {"n": "Galeries & passages couverts", "la": 48.869, "lo": 2.341, "c": "insolite", "m": "Bourse (3) · Grands Boulevards (8,9)", "d": "Galerie Vivienne, passage des Panoramas… des arcades du XIXe siècle, verrières et boutiques anciennes."}, {"n": "Promenade sur les quais de Seine", "la": 48.8566, "lo": 2.3387, "c": "insolite", "m": "Saint-Michel · Pont Neuf", "d": "Bouquinistes, péniches, ponts : la balade la plus parisienne, classée à l'UNESCO."}, {"n": "Rue Crémieux", "la": 48.847, "lo": 2.3719, "c": "insolite", "m": "Gare de Lyon (1,14, RER A,D)", "d": "Petite rue pavée aux maisons colorées, l'une des plus photographiées de Paris (lieu habité, restez discret)."}, {"n": "Marché aux Puces de Saint-Ouen", "la": 48.902, "lo": 2.3416, "c": "insolite", "m": "Porte de Clignancourt (4)", "d": "Le plus grand marché d'antiquités du monde : un labyrinthe de brocante et de trouvailles."}, {"n": "Père-Lachaise", "la": 48.8615, "lo": 2.3934, "c": "insolite", "m": "Père Lachaise (2,3) · Philippe Auguste (2)", "d": "Cimetière-jardin où reposent Jim Morrison, Édith Piaf, Oscar Wilde… Une promenade hors du temps."}, {"n": "Canal Saint-Martin", "la": 48.8709, "lo": 2.365, "c": "insolite", "m": "Jacques Bonsergent (5) · République", "d": "Écluses, passerelles et berges bobo-bohèmes. Parfait pour flâner ou pique-niquer."}, {"n": "Île Saint-Louis", "la": 48.8517, "lo": 2.3573, "c": "insolite", "m": "Pont Marie (7)", "d": "Île au cœur de Paris, ruelles paisibles, glaces Berthillon et hôtels particuliers du XVIIe."}, {"n": "Montmartre & place du Tertre", "la": 48.8865, "lo": 2.3408, "c": "quartier", "m": "Abbesses (12) · Lamarck–Caulaincourt (12)", "d": "Le village des peintres : ruelles, vignes, moulins. Montez par le funiculaire ou les escaliers."}, {"n": "Le Marais", "la": 48.859, "lo": 2.359, "c": "quartier", "m": "Saint-Paul (1) · Rambuteau (11)", "d": "Hôtels particuliers, place des Vosges, boutiques et vie nocturne. Le Paris historique et branché."}, {"n": "Quartier latin", "la": 48.85, "lo": 2.345, "c": "quartier", "m": "Saint-Michel (4, RER B,C) · Cluny", "d": "Sorbonne, librairies, ruelles médiévales et bistrots étudiants. Le Paris intellectuel."}, {"n": "Saint-Germain-des-Prés", "la": 48.854, "lo": 2.334, "c": "quartier", "m": "Saint-Germain-des-Prés (4)", "d": "Cafés littéraires (Flore, Deux Magots), galeries et chic rive gauche."}, {"n": "Champs-Élysées", "la": 48.8698, "lo": 2.3079, "c": "quartier", "m": "Franklin D. Roosevelt (1,9) · George V (1)", "d": "« La plus belle avenue du monde », de la Concorde à l'Arc de Triomphe. Boutiques et cinémas."}, {"n": "Quartier de la Butte-aux-Cailles", "la": 48.8275, "lo": 2.3508, "c": "quartier", "m": "Corvisart (6) · Place d'Italie (5,6,7)", "d": "Village méconnu aux ruelles pavées, street art et bistrots, loin des circuits touristiques."}, {"n": "Belleville", "la": 48.8722, "lo": 2.3767, "c": "quartier", "m": "Belleville (2,11)", "d": "Quartier multiculturel, street art, ateliers d'artistes et l'un des meilleurs panoramas de Paris."}, {"n": "Bercy & Cour Saint-Émilion", "la": 48.833, "lo": 2.387, "c": "quartier", "m": "Cour Saint-Émilion (14)", "d": "Anciens chais reconvertis en allées piétonnes, cinéma, parc moderne au bord de la Seine."}, {"n": "Gare du Nord", "la": 48.8809, "lo": 2.3553, "c": "quartier", "m": "Gare du Nord (4,5, RER B,D,E)", "d": "Plus grande gare d'Europe : Eurostar (Londres), Thalys, trains du nord. Hub du RER B vers CDG."}, {"n": "Gare de Lyon", "la": 48.8443, "lo": 2.3744, "c": "quartier", "m": "Gare de Lyon (1,14, RER A,D)", "d": "TGV vers le sud-est et l'Italie. Le restaurant Le Train Bleu vaut le coup d'œil."}, {"n": "Gare Montparnasse", "la": 48.8404, "lo": 2.3199, "c": "quartier", "m": "Montparnasse-Bienvenüe (4,6,12,13)", "d": "TGV vers l'ouest et le sud-ouest (Bretagne, Bordeaux)."}, {"n": "Châtelet–Les Halles", "la": 48.8617, "lo": 2.347, "c": "quartier", "m": "Châtelet (1,4,7,11,14, RER A,B,D)", "d": "La plus grande station souterraine du monde : nœud central du réseau, correspondances tous azimuts."}];
+var CATS={monument:{label:"Monuments",color:"#1B3A5B"},musee:{label:"Musées",color:"#E8A33D"},vue:{label:"Points de vue",color:"#2E7D52"},jardin:{label:"Jardins & parcs",color:"#3E8E5A"},insolite:{label:"Insolite",color:"#B5532A"},quartier:{label:"Quartiers & gares",color:"#7A4FA0"}};
+var map=L.map("wkmap",{scrollWheelZoom:false}).setView([48.8584,2.3470],12);
+map.on("click",function(){});
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"&copy; OpenStreetMap"}).addTo(map);
+var active={}; var layers={};
+Object.keys(CATS).forEach(function(k){active[k]=true;layers[k]=L.layerGroup().addTo(map);});
+function mk(color){return L.divIcon({className:"",html:'<div style="width:18px;height:18px;border-radius:50% 50% 50% 0;background:'+color+';transform:rotate(-45deg);border:2.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)"></div>',iconSize:[18,18],iconAnchor:[9,18],popupAnchor:[0,-16]});}
+LIEUX.forEach(function(p){
+  var c=CATS[p.c]||CATS.monument;
+  var html='<div class="wkpop"><b>'+p.n+'</b><span class="wkm">\u24c2\ufe0e '+p.m+'</span><span class="wkd">'+p.d+'</span></div>';
+  L.marker([p.la,p.lo],{icon:mk(c.color)}).bindPopup(html).addTo(layers[p.c]);
+});
+var fc=document.getElementById("mapfilters");
+Object.keys(CATS).forEach(function(k){
+  var b=document.createElement("button");
+  b.innerHTML='<span class="dot" style="background:'+CATS[k].color+'"></span>'+CATS[k].label;
+  b.onclick=function(){active[k]=!active[k];if(active[k]){layers[k].addTo(map);b.classList.remove("off");}else{map.removeLayer(layers[k]);b.classList.add("off");}};
+  fc.appendChild(b);
+});
+setTimeout(function(){map.invalidateSize();},300);
+})();
+</script>
+
+</body></html>
