@@ -260,7 +260,59 @@ const ILLUS={
     <path d="M400 60 v20" stroke="${PAL.ocre2}" stroke-width="8" stroke-linecap="round"/>
     <path d="M210 230 a26 26 0 1 1 0 0.1 z" fill="url(#ocg)"/><circle cx="210" cy="228" r="22" fill="url(#ocg)"/><circle cx="210" cy="222" r="8" fill="#fff"/><path d="M210 250 l-12 24 h24 z" fill="${PAL.ocre2}"/>
     <circle cx="600" cy="250" r="22" fill="${PAL.sky}"/><circle cx="600" cy="244" r="8" fill="#fff"/><path d="M600 272 l-12 24 h24 z" fill="${PAL.ink2}"/>
-    <ellipse cx="400" cy="320" rx="200" ry="18" fill="${PAL.ink}" opacity="0.08"/>`)
+    <ellipse cx="400" cy="320" rx="200" ry="18" fill="${PAL.ink}" opacity="0.08"/>`),
+
+  // ===== Plomberie =====
+  plomberie:()=>svgWrap(`
+    <circle cx="650" cy="100" r="120" fill="${PAL.sky}" opacity="0.12"/>
+    <path d="M250 110 v70 h120 v60" fill="none" stroke="url(#ocg)" stroke-width="20" stroke-linecap="round"/>
+    <rect x="232" y="92" width="40" height="36" rx="6" fill="${PAL.ink}"/>
+    <rect x="350" y="232" width="40" height="44" rx="6" fill="${PAL.ink}"/>
+    <path d="M370 270 q0 26 -1 40" stroke="${PAL.sky}" stroke-width="7" stroke-linecap="round"/>
+    <path d="M360 320 q10 16 0 24 q-10 -8 0 -24z" fill="${PAL.sky}"/>
+    <circle cx="250" cy="92" r="16" fill="${PAL.ocre2}"/><path d="M250 76 v-14 M250 92 h16 M250 92 h-16" stroke="${PAL.ocre2}" stroke-width="6" stroke-linecap="round"/>
+    <path d="M160 300 h470" stroke="${PAL.ink}" stroke-width="5" opacity="0.12"/>`),
+  // Tubes / raccords
+  tubes:()=>svgWrap(`
+    <circle cx="160" cy="100" r="100" fill="${PAL.ocre}" opacity="0.10"/>
+    <rect x="220" y="150" width="180" height="46" rx="8" fill="url(#ocg)"/>
+    <rect x="200" y="142" width="28" height="62" rx="5" fill="${PAL.ink}"/>
+    <rect x="400" y="150" width="46" height="46" fill="${PAL.ink2}"/>
+    <rect x="446" y="150" width="160" height="46" rx="8" fill="#C98A4B"/>
+    <rect x="600" y="142" width="28" height="62" rx="5" fill="${PAL.ink}"/>
+    <ellipse cx="220" cy="173" rx="9" ry="23" fill="${PAL.paper2}"/>
+    <ellipse cx="606" cy="173" rx="9" ry="23" fill="#A86A2E"/>
+    <circle cx="300" cy="285" r="34" fill="none" stroke="${PAL.ink2}" stroke-width="10"/><circle cx="300" cy="285" r="14" fill="${PAL.paper2}"/>
+    <circle cx="430" cy="285" r="26" fill="none" stroke="${PAL.ocre2}" stroke-width="9"/>`),
+  // Soudure / chalumeau / flamme
+  soudure:()=>svgWrap(`
+    <circle cx="640" cy="280" r="110" fill="${PAL.ocre}" opacity="0.10"/>
+    <rect x="250" y="200" width="220" height="40" rx="8" fill="url(#ocg)"/>
+    <rect x="470" y="195" width="50" height="50" rx="6" fill="${PAL.ink}"/>
+    <rect x="520" y="200" width="120" height="40" rx="8" fill="#C98A4B"/>
+    <path d="M250 160 l40 40 l-40 40" fill="none" stroke="${PAL.ink2}" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M180 120 q30 30 0 60 q-26 -30 0 -60z" fill="${PAL.ocre}"/>
+    <path d="M188 134 q18 18 0 36 q-15 -18 0 -36z" fill="${PAL.ocre2}"/>
+    <path d="M196 146 q10 11 0 22 q-9 -11 0 -22z" fill="#fff" opacity="0.8"/>
+    <rect x="120" y="170" width="70" height="20" rx="8" fill="${PAL.ink}"/>`),
+  // Écrous / boulonnerie
+  ecrous:()=>svgWrap(`
+    <circle cx="160" cy="100" r="100" fill="${PAL.ink2}" opacity="0.08"/>
+    <path d="M300 120 l52 30 v60 l-52 30 l-52 -30 v-60 z" fill="url(#ocg)"/><circle cx="300" cy="180" r="26" fill="${PAL.paper}"/>
+    <path d="M480 180 l44 26 v52 l-44 26 l-44 -26 v-52 z" fill="${PAL.ink2}"/><circle cx="480" cy="232" r="22" fill="${PAL.paper}"/>
+    <path d="M560 110 l34 20 v40 l-34 20 l-34 -20 v-40 z" fill="${PAL.ocre2}"/><circle cx="560" cy="150" r="16" fill="${PAL.paper}"/>
+    <path d="M210 250 l30 18 v36 l-30 18 l-30 -18 v-36 z" fill="${PAL.ink}"/><circle cx="210" cy="286" r="14" fill="${PAL.paper}"/>`),
+  // Fuite / goutte / robinet
+  fuite:()=>svgWrap(`
+    <circle cx="640" cy="100" r="110" fill="${PAL.sky}" opacity="0.14"/>
+    <rect x="300" y="120" width="50" height="80" rx="8" fill="url(#ocg)"/>
+    <rect x="270" y="110" width="110" height="26" rx="8" fill="${PAL.ink}"/>
+    <path d="M325 200 v30" stroke="${PAL.ink2}" stroke-width="10" stroke-linecap="round"/>
+    <path d="M315 175 h60 q14 0 14 14 v6" fill="none" stroke="${PAL.ink}" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="395" cy="150" r="14" fill="${PAL.ocre2}"/>
+    <path d="M325 250 q12 18 0 30 q-12 -12 0 -30z" fill="${PAL.sky}"/>
+    <path d="M325 300 q9 14 0 24 q-9 -10 0 -24z" fill="${PAL.sky}" opacity="0.7"/>
+    <ellipse cx="325" cy="335" rx="46" ry="10" fill="${PAL.sky}" opacity="0.3"/>`)
 };
 
 // Applique les illustrations : remplace les .art-hero-img[data-illus] et .art-top[data-illus]
